@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- Style Validation -->
+    <style>
+      input:invalid {
+        border: 3px solid red;
+      }
+      input:valid {
+        border: 3px solid green;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- required -->
+    <form action="#" method="get">
+      <label for="userEmail">*Email</label>
+      <input type="email" name="userEmail" required />
+      <button type="submit">Login</button>
+    </form>
+
+    <!-- minlength, maxlength -->
+    <form action="#" method="get">
+      <label for="username">Username</label>
+      <input type="text" name="username" minlength="4" maxlength="10" />
+      <button type="submit">Login</button>
+    </form>
+
+    <!-- min max (number range validation) -->
+    <form action="#" method="get">
+      <label for="quantity">Cell Number</label>
+      <input type="number" name="quantity" min="1" max="3" />
+      <button type="submit">Login</button>
+    </form>
+
+    <!-- pattern validation (regular expression) -->
+    <form action="#" method="get">
+      <label for="italianPhoneNumber">Italian Cell Number</label>
+      <!-- Check that the following input is an italian phone number -->
+      <input
+        type="text"
+        name="italianPhoneNumber"
+        pattern="^(((\+|00))39)?((3[1-6][0-9]))(\d{7})$"
+        title="Please enter a valid italian phone number"
+      />
+      <!-- TIP: The title attribute will give a custom validation message -->
+      <!-- TIP: The pattern attribute can only be used on <input> elements -->
+
+      <!-- BEWARE: HTML Validation is limited. We cannot validate if a user types the same password in the confirmation filed, we cannot style the validation message. -->
+      <!-- BEWARE: Do not rely on client-side validation. Use server-side validation as well -->
+      <button type="submit">Login</button>
+    </form>
+  </body>
+</html>
