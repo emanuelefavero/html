@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="myForm" onsubmit="displayData()">
+      <label for="colors">Choose your favorite color:</label>
+      <select name="colors" id="colors">
+        <optgroup label="Warm Colors">
+          <option value="red" selected>Red</option>
+          <option value="orange">Orange</option>
+          <option value="yellow">Yellow</option>
+        </optgroup>
+        <optgroup label="Cool Colors">
+          <option value="green">Green</option>
+          <option value="blue">Blue</option>
+          <option value="purple">Purple</option>
+        </optgroup>
+      </select>
+
+      <input type="submit" value="Submit" />
+    </form>
+
+    <h1 id="output"></h1>
+
+    <script>
+      function displayData() {
+        event.preventDefault()
+        const myForm = document.getElementById('myForm')
+        const output = document.getElementById('output')
+        const chosenColor = myForm.elements.colors.value
+        output.innerHTML = `Your favorite color is ${chosenColor}`
+        document.body.style.backgroundColor = chosenColor
+      }
+    </script>
+  </body>
+</html>
