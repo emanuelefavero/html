@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Image Map Tag</title>
+
+    <style>
+      body {
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      img {
+        width: 300px;
+        border: 1px solid #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- The map tag is used to define an image map (a clickable link area) on an image -->
+    <!-- TIP: Use https://www.image-map.net to generate the image map with coordinates -->
+    <!-- TIP: The coordinates of the top-left corner of an area are 0,0 -->
+    <!--TIP: The area element is used only inside a map element -->
+    <img
+      usemap="#solar-system"
+      src="/images/solar-system.jpg"
+      alt="The solar system"
+    />
+
+    <map name="solar-system">
+      <area
+        alt="Sun"
+        title="Sun"
+        href="https://en.wikipedia.org/wiki/Sun"
+        coords="299,85,37"
+        shape="circle"
+      />
+      <area
+        target="_blank"
+        alt="Mercury"
+        title="Mercury"
+        href="https://en.wikipedia.org/wiki/Mercury_(planet)"
+        coords="258,85,7"
+        shape="circle"
+      />
+      <area
+        alt="Venus"
+        title="Venus"
+        href="https://en.wikipedia.org/wiki/Venus"
+        coords="245,85,9"
+        shape="circle"
+      />
+      <area
+        alt="Earth"
+        title="Earth"
+        href="https://en.wikipedia.org/wiki/Earth"
+        coords="231,86,11"
+        shape="circle"
+      />
+      <area
+        alt="Mars"
+        title="Mars"
+        href="https://en.wikipedia.org/wiki/Mars"
+        coords="216,85,9"
+        shape="circle"
+      />
+      <area
+        alt="Jupiter"
+        title="Jupiter"
+        href="https://en.wikipedia.org/wiki/Jupiter"
+        coords="173,85,35"
+        shape="circle"
+      />
+      <area
+        alt="Saturn"
+        title="Saturn"
+        href="https://en.wikipedia.org/wiki/Saturn"
+        coords="99,85,43"
+        shape="circle"
+      />
+      <area
+        alt="Uranus"
+        title="Uranus"
+        href="https://en.wikipedia.org/wiki/Uranus"
+        coords="46,85,13"
+        shape="circle"
+      />
+      <area
+        alt="Neptune"
+        title="Neptune"
+        href="https://en.wikipedia.org/wiki/Neptune"
+        coords="19,85,16"
+        shape="circle"
+      />
+    </map>
+  </body>
+</html>
