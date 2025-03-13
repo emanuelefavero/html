@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bad Accessibility Examples</title>
+
+    <style>
+      /* Basic styles for visibility */
+      .highlight {
+        color: red;
+        font-weight: bold;
+      }
+      .invisible {
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bad Accessibility Examples</h1>
+
+    <h2>1. Missing Alternative Text for Images</h2>
+    <img src="image.jpg" />
+
+    <h2>2. Poor Contrast Between Text and Background</h2>
+    <p style="color: #aaa; background-color: #fff">
+      This text has poor contrast and may be hard to read for some users.
+    </p>
+
+    <h2>3. Empty Links</h2>
+    <a href="#">Click here</a>
+
+    <h2>4. Lack of Form Labels</h2>
+    <form>
+      <input type="text" name="name" />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <h2>5. No Keyboard Navigation</h2>
+    <button onclick="alert('You clicked me!')">Click me</button>
+
+    <h2>6. Misuse of Heading Tags</h2>
+    <h3>This is a subheading that should be an H2</h3>
+
+    <h2>7. Non-Descriptive Links</h2>
+    <a href="https://example.com">Click here</a>
+
+    <h2>8. Inaccessible Content Due to Overuse of Colors</h2>
+    <p style="color: red">
+      This text is only visible to people who can distinguish red.
+    </p>
+
+    <h2>9. Missing ARIA Labels</h2>
+    <button aria-label="Close">X</button>
+
+    <h2>10. Inaccessible Tables</h2>
+    <table border="1">
+      <tr>
+        <td>Item 1</td>
+        <td>Price 1</td>
+      </tr>
+      <tr>
+        <td>Item 2</td>
+        <td>Price 2</td>
+      </tr>
+    </table>
+
+    <h2>11. No Focus States for Interactive Elements</h2>
+    <button>Click me</button>
+
+    <h2>12. Invisible Content</h2>
+    <p class="invisible">
+      This content is invisible but still in the document.
+    </p>
+
+    <h2>13. Content Without Language Tag</h2>
+    <p>Unspecified language content.</p>
+
+    <h2>14. Lack of Descriptive Link Titles</h2>
+    <a href="https://example.com" title="">Go to Example</a>
+
+    <h2>15. Non-Text Content That Doesn't Have a Text Alternative</h2>
+    <div style="background-color: blue; height: 50px; width: 50px"></div>
+  </body>
+</html>
